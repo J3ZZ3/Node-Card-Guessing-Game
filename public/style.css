@@ -1,33 +1,23 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 #game-board {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap:10px;
-    max-width: 600px;
-    margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  margin: 20px auto;
+  width: 60%;
 }
 
 .card {
-    width: 100px;
-    padding-top: 100%;
-    background-color: #ddd;
-    position: relative;
-    cursor: pointer;
+  width: 100%;
+  padding-top: 100%; /* 1:1 aspect ratio */
+  background-color: #ddd;
+  cursor: pointer;
 }
 
-.card-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    display:none;
-}
-
-.card.flipped .card-content {
-    display: block;
+#timer, #reset-button {
+  margin-top: 10px;
 }
