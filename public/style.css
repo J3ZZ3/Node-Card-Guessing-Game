@@ -1,3 +1,8 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 #game-board {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -43,4 +48,8 @@
   background-color: #4CAF50;
   color: white;
   transform: rotateY(180deg);
+}
+
+#timer, #reset-button {
+  margin-top: 10px;
 }
