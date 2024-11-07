@@ -8,12 +8,17 @@
 </head>
 <body>
   <h1>Card Guessing Game</h1>
-  <div id="timer">Time: 00:00:00</div>
+  <div id="timer">Time: 00:00</div>
   <button id="reset-button">Reset Game</button>
   
   <div id="game-board">
     <% cards.forEach((card, index) => { %>
-      <div class="card" data-card-value="<%= card %>" onclick="selectCard(this)"></div>
+      <div class="card" data-card-value="<%= card %>" onclick="selectCard(this)">
+        <div class="card-inner">
+          <div class="card-front"></div>
+          <div class="card-back"><%= card %></div>
+        </div>
+      </div>
     <% }) %>
   </div>
 
