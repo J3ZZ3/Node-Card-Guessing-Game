@@ -1,8 +1,6 @@
 let firstCard, secondCard;
 let hasFlippedCard = false;
 let lockBoard = false;
-let startTime;
-const cards = document.querySelectorAll('.card');
 
 function startTimer() {
   startTime = Date.now();
@@ -14,6 +12,7 @@ function startTimer() {
 
 function selectCard(card) {
   if (lockBoard || card === firstCard) return;
+
   card.classList.add('flipped');
   
   if (!hasFlippedCard) {
