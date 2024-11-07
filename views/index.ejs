@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Card Guessing Game</title>
+</head>
+<body>
+  <h1>Card Guessing Game</h1>
+  <button id="reset-button" onclick="window.location.reload()">Reset Game</button>
+  <div id="game-board">
+    <% cards.forEach((card, index) => { %>
+      <div class="card" data-card-value="<%= card %>" onclick="selectCard(this)">
+        <span class="card-content"><%= card %></span>
+      </div>
+    <% }) %>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

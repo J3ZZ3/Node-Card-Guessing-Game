@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap:10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    padding-top: 100%;
+    background-color: #ddd;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    display:none;
+}
+
+.card.flipped .card-content {
+    display: block;
+}
