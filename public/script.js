@@ -3,9 +3,9 @@ let hasFlippedCard = false;
 let lockBoard = false;
 
 function startTimer() {
-  startTime = Date.now();
+  startTimer = Date.now();
   setInterval(() => {
-    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    const elapsed = Math.floor((Date.now() - startTimer) / 1000);
     document.getElementById('timer').innerText = `Time: ${elapsed}s`;
   }, 1000);
 }
