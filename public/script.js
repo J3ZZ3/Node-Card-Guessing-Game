@@ -1,8 +1,6 @@
 let firstCard, secondCard;
 let hasFlippedCard = false;
 let lockBoard = false;
-let startTime;
-const cards = document.querySelectorAll('.card');
 
 function startTimer() {
   startTime = Date.now();
@@ -11,6 +9,8 @@ function startTimer() {
     document.getElementById('timer').innerText = `Time: ${elapsed}s`;
   }, 1000);
 }
+
+
 
 function selectCard(card) {
   if (lockBoard || card === firstCard) return;
@@ -38,6 +38,7 @@ function disableCards() {
   resetBoard();
 }
 
+
 function unflipCards() {
   lockBoard = true;
   setTimeout(() => {
@@ -52,6 +53,7 @@ function resetBoard() {
   [firstCard, secondCard] = [null, null];
 }
 
+  
 document.getElementById('reset-button').addEventListener('click', () => {
   window.location.reload();
 });

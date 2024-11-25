@@ -8,9 +8,13 @@
 </head>
 <body>
   <h1>Card Guessing Game</h1>
-  <div id="timer">Time: 00:00</div>
-  <button id="reset-button">Reset Game</button>
   
+
+  <div id="timer">Time: 00:00</div>
+  <button id="reset-button">Reset Game</button>  
+    <a  href="/scores">scores</a>
+  
+
   <div id="game-board">
     <% cards.forEach((card, index) => { %>
       <div class="card" data-card-value="<%= card %>" onclick="selectCard(this)">
@@ -21,7 +25,7 @@
       </div>
     <% }) %>
   </div>
-
+  
   <script src="/script.js"></script>
 </body>
 </html>

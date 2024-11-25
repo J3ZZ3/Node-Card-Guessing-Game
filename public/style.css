@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
+  background-color: grey;
 }
 
 #game-board {
@@ -41,7 +42,7 @@ body {
 }
 
 .card-front {
-  background-color: #ddd;
+  background-color: black;
 }
 
 .card-back {
