@@ -8,12 +8,15 @@
 </head>
 <body>
   <h1>Card Guessing Game</h1>
-  
 
   <div id="timer">Time: 00:00</div>
   <button id="reset-button">Reset Game</button>  
-    <a  href="/scores">scores</a>
-  
+  <a href="/scores">Scores</a>
+
+  <!-- Game Over Message -->
+  <div id="game-over-message" style="display: none;">
+    <h2>Congratulations! You've completed the game!</h2>
+  </div>
 
   <div id="game-board">
     <% cards.forEach((card, index) => { %>
