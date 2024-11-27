@@ -1,17 +1,23 @@
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: grey;
+  background-color: #f1f1f1; /* Lighter background for better contrast */
+  margin: 0;
+  padding: 0;
 }
 
+/* Game Board */
 #game-board {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
   margin: 20px auto;
   width: 60%;
+  max-width: 800px; /* Limit the width for larger screens */
 }
 
+/* Card Styles */
 .card {
   perspective: 1000px;
 }
@@ -39,18 +45,75 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 2em;
+  color: white;
+  border-radius: 10px; /* Round the corners of the cards */
 }
 
+/* Front side of the card */
 .card-front {
-  background-color: black;
+  background-color: #333; /* Darker background for the front */
+  color: #fff;
+  border: 2px solid #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Back side of the card */
 .card-back {
   background-color: #4CAF50;
-  color: white;
   transform: rotateY(180deg);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Timer and Reset Button Styles */
 #timer, #reset-button {
   margin-top: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button Hover Effects */
+#reset-button:hover, #timer:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Game Over Message */
+#game-over-message {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: green;
+  display: none; /* Initially hidden */
+}
+
+/* Styling for Scores Link */
+a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #007BFF;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  #game-board {
+    grid-template-columns: repeat(4, 1fr); /* Adjust grid layout for small screens */
+    width: 90%;
+  }
+
+  .card-inner {
+    padding-top: 100%; /* Maintain 1:1 ratio */
+  }
 }
